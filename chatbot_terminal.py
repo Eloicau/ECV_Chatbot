@@ -18,7 +18,7 @@ words = pickle.load(open("words.pkl", "rb"))
 classes = pickle.load(open("classes.pkl", "rb"))
 model = load_model('chatbot_model.h5')
 
-# Charger les données du fichier parameters.json
+# Chargement des données du fichier parameters.json
 with open('parameters.json', 'r') as f:
     parameters = json.load(f)
 
@@ -29,6 +29,7 @@ description = parameters['description']
 nltk.download('averaged_perceptron_tagger')
 nltk.download('punkt')
 
+# Définition des fonctions du chatbot
 def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
     sentence_words = [lemmatizer.lemmatize(word.lower()) for word in sentence_words]
@@ -60,7 +61,7 @@ def establish_db_connection():
         host="localhost",
         user="root",
         password="",
-        database="chatbot_V2"
+        database="chatbot"
     )
 
 def get_figurine_info(figurine_name):
@@ -123,7 +124,6 @@ def extract_variables(message, patterns):
             break
 
     if not variables:
-        # Recherche de correspondances partielles
         message_words = clean_up_sentence(message)
         for pattern in patterns:
             pattern_words = clean_up_sentence(pattern)

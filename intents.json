@@ -3,18 +3,18 @@
     {
       "tag": "greeting",
       "patterns": ["Bonjour", "Salut", "Coucou"],
-      "responses": ["Bonjour, bienvenue sur notre site 😀", "Bonjour, que puis-je faire pour vous ?"],
+      "responses": ["Bonjour, bienvenue sur notre site ", "Bonjour, que puis-je faire pour vous ?"],
       "context_set": ""
     },
     {
       "tag": "goodbye",
       "patterns": ["Au revoir", "À bientôt", "Bonne journée"],
-      "responses": ["À bientôt, merci de votre visite 👋", "Passez une bonne journée", "Au revoir ! Revenez bientôt 👋"]
+      "responses": ["À bientôt, merci de votre visite", "Passez une bonne journée", "Au revoir ! Revenez bientôt"]
     },
     {
       "tag": "thanks",
       "patterns": ["Merci", "Merci beaucoup", "C'est utile"],
-      "responses": ["Je suis ravi de pouvoir vous aider !", "De rien !", "C'est un plaisir de vous assister 👍"]
+      "responses": ["Je suis ravi de pouvoir vous aider !", "De rien !", "C'est un plaisir de vous assister"]
     },
     {
       "tag": "presentation",
@@ -45,8 +45,8 @@
     },
     {
       "tag": "product_search",
-      "patterns": ["Je cherche des figurines", "Qu'est ce que vous proposer en figurines ?", "Quelles sont vos figurines ?", "Je recherche une figurine spécifique"],
-      "responses": ["Nous avons une large gamme de figurines POP. Quel figurine ou licence recherchez-vous ?"]
+      "patterns": ["Que vendez-vous ?", "Qu'est ce que vous proposer ?", "Quelles sont vos produits ?"],
+      "responses": ["Nous proposons une large gamme de figurines POP. Quel figurine ou licence recherchez-vous ?"]
     },
     {
       "tag": "purchase",
@@ -75,12 +75,12 @@
     },
     {
       "tag": "figurine_info",
-      "patterns": ["Parle moi de $figurine_name", "Qu'est-ce que tu peux me dire sur la figurine $figurine_name"],
+      "patterns": ["Combien coûte $figurine_name", "Parle moi de $figurine_name", "Qu'est-ce que tu peux me dire sur la figurine $figurine_name ?"],
       "responses": ["La figurine $figurine_name (num: $figurine_number) vaut $figurine_price €. Le personnage vient de la licence '$licence_name' et la figurine a été produite par $figurine_brand"]
     },
     {
       "tag": "licence_info",
-      "patterns": ["Décris moi la licence $licence_name", "Qu'est-ce que tu peux me dire sur $licence_name"],
+      "patterns": ["Décris moi la licence $licence_name", "Qu'est-ce que tu peux me dire sur $licence_name ?"],
       "responses": ["$licence_description. Nous possédons actuellement $licence_figurines_count figurines pour cette licence."]
     },
     {

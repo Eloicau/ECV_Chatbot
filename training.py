@@ -19,6 +19,7 @@ from tensorflow.keras.optimizers import SGD
 lemmatizer = WordNetLemmatizer()
 stop_words = set(stopwords.words('french'))
 
+#  Prétraitement du texte
 def preprocess_text(text):
 
     tokens = word_tokenize(text.lower())
@@ -31,11 +32,13 @@ def preprocess_text(text):
 
 intents = json.loads(open("intents.json").read())
 
+# listes de mots, de classes et de documents
 words = []
 classes = []
 documents = []
 ignore_letters = ["?", "!", ".", ","]
 
+# Parcours de intents.json pour construire les mots, classes et documents
 for intent in intents["intents"]:
     for pattern in intent["patterns"]:
         word_list = preprocess_text(pattern)
@@ -49,6 +52,7 @@ words = sorted(set(words))
 
 classes = sorted(set(classes))
 
+# Sauvegarde des mots et classes dans des fichiers pickle
 pickle.dump(words, open("words.pkl", "wb"))
 pickle.dump(classes, open("classes.pkl", "wb"))
 
@@ -66,12 +70,14 @@ for document in documents:
     output_row[classes.index(document[1])] = 1
     training.append([bag, output_row])
 
+# Gestion des données d'entrainements
 random.shuffle(training)
 training = np.array(training)
 
 train_x = list(training[:, 0])
 train_y = list(training[:, 1])
 
+# Création du modèle
 model = Sequential()
 model.add(Dense(128, input_shape=(len(train_x[0]), ), activation="relu"))
 model.add(Dropout(0.5))
