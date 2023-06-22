@@ -1,0 +1,8 @@
+# Ignorer les dossiers
+/__pycache__
+/.vscode
+
+# Ignorer les fichiers
+chatbot_model.h5
+classes.pkl
+words.pkl

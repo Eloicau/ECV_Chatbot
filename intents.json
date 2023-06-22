@@ -1,0 +1,102 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Bonjour", "Salut", "Coucou"],
+      "responses": ["Bonjour, bienvenue sur notre site 😀", "Bonjour, que puis-je faire pour vous ?"],
+      "context_set": ""
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Au revoir", "À bientôt", "Bonne journée"],
+      "responses": ["À bientôt, merci de votre visite 👋", "Passez une bonne journée", "Au revoir ! Revenez bientôt 👋"]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Merci", "Merci beaucoup", "C'est utile"],
+      "responses": ["Je suis ravi de pouvoir vous aider !", "De rien !", "C'est un plaisir de vous assister 👍"]
+    },
+    {
+      "tag": "presentation",
+      "patterns": [
+        "Présentation du chatbot",
+        "Qui es-tu ?",
+        "Qu'est-ce que tu fais ?"
+      ],
+      "responses": [
+        "Je suis un chatbot conçu pour fournir des réponses à vos questions sur nos produits. Je suis ici pour vous aider !"
+      ]
+    },
+    {
+      "tag": "utility",
+      "patterns": [
+        "À quoi sert ce chatbot ?",
+        "Quelle est ton utilité ?",
+        "Comment peux-tu m'aider ?"
+      ],
+      "responses": [
+        "Ce chatbot est conçu pour répondre à vos questions et vous fournir des informations liés aux produits de ce sites. Je ferai de mon mieux pour vous aider."
+      ]
+    },
+    {
+      "tag": "product_inquiry",
+      "patterns": ["Quels produits proposez-vous ?", "Pouvez-vous me parler de vos produits ?", "Quelles sont vos offres ?", "Je recherche un produit spécifique"],
+      "responses": ["Nous avons une large gamme de figurines POP. Quel figurine recherchez-vous ?"]
+    },
+    {
+      "tag": "product_search",
+      "patterns": ["Je cherche des figurines", "Qu'est ce que vous proposer en figurines ?", "Quelles sont vos figurines ?", "Je recherche une figurine spécifique"],
+      "responses": ["Nous avons une large gamme de figurines POP. Quel figurine ou licence recherchez-vous ?"]
+    },
+    {
+      "tag": "purchase",
+      "patterns": ["Comment puis-je acheter un produit ?", "Quelle est la procédure d'achat ?", "Puis-je passer commande ?"],
+      "responses": ["Vous pouvez acheter un produit en l'ajoutant au panier et en suivant le processus de paiement.", "Pour passer commande, veuillez ajouter un produit au panier et procéder au paiement."]
+    },
+    {
+      "tag": "payment",
+      "patterns": ["Quelles sont les options de paiement ?", "Comment puis-je payer ?", "Quels modes de paiement acceptez-vous ?"],
+      "responses": ["Nous acceptons les paiements par carte de crédit et PayPal.", "Vous pouvez payer par carte de crédit ou via PayPal."]
+    },
+    {
+      "tag": "shipping",
+      "patterns": ["Quels sont les frais de livraison ?", "Proposez-vous la livraison gratuite ?"],
+      "responses": ["Les frais de livraison dépendent de votre emplacement et du poids du colis. Vous pouvez consulter les détails lors du processus de commande."]
+    },
+    {
+      "tag": "shipping_time",
+      "patterns": ["Combien de temps faut-il pour la livraison ?"],
+      "responses": ["Le délai de livraison varie en fonction de votre emplacement. Nous proposons également la livraison express pour une livraison plus rapide."]
+    },
+    {
+      "tag": "order_status",
+      "patterns": ["Où puis-je vérifier le statut de ma commande ?", "Comment suivre ma commande ?", "Je veux savoir où est ma commande"],
+      "responses": ["Vous pouvez vérifier le statut de votre commande en vous connectant à votre compte et en accédant à la section 'Suivi des commandes'.", "Pour suivre votre commande, veuillez vous rendre dans la section 'Suivi des commandes' de votre compte."]
+    },
+    {
+      "tag": "figurine_info",
+      "patterns": ["Parle moi de $figurine_name", "Qu'est-ce que tu peux me dire sur la figurine $figurine_name"],
+      "responses": ["La figurine $figurine_name (num: $figurine_number) vaut $figurine_price €. Le personnage vient de la licence '$licence_name' et la figurine a été produite par $figurine_brand"]
+    },
+    {
+      "tag": "licence_info",
+      "patterns": ["Décris moi la licence $licence_name", "Qu'est-ce que tu peux me dire sur $licence_name"],
+      "responses": ["$licence_description. Nous possédons actuellement $licence_figurines_count figurines pour cette licence."]
+    },
+    {
+      "tag": "figurines_per_licence",
+      "patterns": ["As-tu des figurines de $licence_name ?", "Montre-moi les figurines de $licence_name"],
+      "responses": ["Voici la liste des figurines de la licence $licence_name :"]
+    },
+    {
+      "tag": "promotion_info",
+      "patterns": ["Y a-t-il des promotions en cours ?", "Quelles sont les offres spéciales du moment ?", "Est-ce qu'il y a des réductions ?"],
+      "responses": ["Non, il n'y a actuellement pas de réduction en cours sur notre site"]
+    },
+    {
+      "tag": "customer_support",
+      "patterns": ["Comment puis-je contacter le service client ?", "J'ai une question, comment puis-je vous contacter ?", "Besoin d'aide avec ma commande"],
+      "responses": ["Vous pouvez nous contacter via notre formulaire de contact sur notre site ou par e-mail à support@exemple.com. Notre équipe du service client sera ravie de vous aider."]
+    }
+  ]
+}
